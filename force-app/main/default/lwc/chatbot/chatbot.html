@@ -1,0 +1,19 @@
+<template>
+    <div class={messageStyle}>
+        <template if:true={showImage}>
+            <lightning-card>
+                <b>{name}</b></br>
+                <img 
+                    src={imageURL} 
+                    alt="User Image" 
+                    height="100px" 
+                    width="100px"/>
+            </lightning-card>
+        </template>
+        <template if:false={showImage}>
+            <lightning-formatted-rich-text value = {messageContent.value}>
+                
+            </lightning-formatted-rich-text>
+        </template>
+    </div>   
+</template>
